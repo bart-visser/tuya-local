@@ -1,0 +1,61 @@
+name: Dual colour Christmas tree lights
+products:
+  - id: rmmfaeezf31prlgs
+    name: Double Color II
+entities:
+  - entity: light
+    icon: "mdi:pine-tree"
+    dps:
+      - id: 20
+        name: switch
+        type: boolean
+      - id: 22
+        name: brightness
+        type: integer
+        range:
+          min: 10
+          max: 1000
+      - id: 102
+        name: effect
+        type: string
+        mapping:
+          - dps_val: "2003e803e80000000"
+            value: C1 steady
+          - dps_val: "2103e800000000000"
+            value: C2 steady
+          - dps_val: "2203e803e81000000"
+            value: C1 slow flash
+          - dps_val: "2303e800001000000"
+            value: C2 slow flash
+          - dps_val: "2403e803e80000000"
+            value: C1 blast flash
+          - dps_val: "2503e800000000000"
+            value: C2 blast flash
+          - dps_val: "2603e803e81000000"
+            value: C1-C2 slow flash
+          - dps_val: "2703e800000000000"
+            value: C1-C2 blast flash
+          - dps_val: "2803e803e81000000"
+            value: C1-C2 slow chase flash
+          - dps_val: "2903e800000000000"
+            value: C1-C2 blast chase flash
+          - dps_val: "2a03e800000000000"
+            value: Blast twinkle
+          - dps_val: "2b03e801f40000000"
+            value: Dim-bright
+          - dps_val: "2c03e801f40100000"
+            value: Slo-glo
+          - dps_val: "2d03e801f40100000"
+            value: In waves
+          - dps_val: "1e03e801f40000000"
+            value: Auto cycle
+  - entity: time
+    translation_key: timer
+    category: config
+    dps:
+      - id: 26
+        name: second
+        type: integer
+        range:
+          min: 0
+          max: 86400
